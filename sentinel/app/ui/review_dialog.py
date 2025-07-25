@@ -130,16 +130,36 @@ class ReviewDialog(QDialog):
         )
         if reply == QMessageBox.StandardButton.Yes:
             # Commit feedback to DB
+            import os
+            from pathlib import Path
+
             for row in range(self.table.rowCount()):
                 chk: QCheckBox = self.table.cellWidget(row, 0)
                 file_id = chk.property("file_id")
                 if file_id == -1:
-                    continue  # stub rows, skip
+                    continue  # stub rows
 
                 approved = chk.isChecked()
-                suggested_item = self.table.item(row, 2)
-                revised_path = suggested_item.text() if suggested_item else None
 
+                orig_item = self.table.item(row, 1)
+                suggested_item = self.table.item(row, 2)
+                orig_path = orig_item.text() if orig_item else ""
+                revised_path = suggested_item.text() if suggested_item else orig_path
+
+                if approved:
+                    try:
+                        dest_path = Path(revised_path).expanduser()
+                        dest_path.parent.mkdir(parents=True, exist_ok=True)
+                        os.rename(orig_path, dest_path)
+                    except OSError as exc:
+                        QMessageBox.critical(
+                            self,
+                            "File Move Error",
+                            f"Failed to move {orig_path} → {revised_path}\n{exc}",
+                        )
+                        continue  # skip DB update on failure
+
+                # Save feedback regardless of move success; status reflects approval flag
                 try:
                     self.db.save_feedback(file_id, approved=approved, revised_path=revised_path)
                 except Exception as exc:  # noqa: BLE001

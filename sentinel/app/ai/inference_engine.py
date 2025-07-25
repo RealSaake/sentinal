@@ -10,6 +10,16 @@ from dataclasses import dataclass
 from typing import Any, Mapping
 from pathlib import Path
 
+# Third-party
+import json
+import os
+from pathlib import Path as _P
+
+import requests
+
+from sentinel.app.ai.prompt_builder import build_prompt
+from sentinel.app.config_manager import CONFIG_PATH
+
 __all__ = ["InferenceResult", "InferenceEngine"]
 
 
@@ -56,29 +66,72 @@ class InferenceEngine:
         InferenceResult
             Suggested destination path with confidence & justification.
         """
-        path: str = metadata.get("path", "")
-        ext = Path(path).suffix.lower()
+        # Build prompt for LLM
+        prompt = build_prompt(metadata, content)
 
-        # Simple heuristic categorization
-        if ext in {".jpg", ".jpeg", ".png", ".gif", ".heic"}:
-            suggested = f"Photos/{Path(path).name}"
-            confidence = 0.6
-        elif ext in {".pdf", ".doc", ".docx", ".txt"}:
-            if "invoice" in Path(path).stem.lower():
-                suggested = f"Documents/Invoices/{Path(path).name}"
-                confidence = 0.75
-            else:
-                suggested = f"Documents/{Path(path).name}"
-                confidence = 0.6
-        elif ext in {".py", ".js", ".ts", ".java"}:
-            suggested = f"Code/{ext[1:].upper()}/{Path(path).name}"
-            confidence = 0.5
-        else:
-            suggested = f"Other/{Path(path).name}"
-            confidence = 0.3
+        if self.backend_mode == "local":
+            url = "http://127.0.0.1:8080/completion"
+            payload = {
+                "prompt": prompt,
+                "max_tokens": 512,
+                "temperature": 0.2,
+                "stop": ["\n\n"],
+                "stream": False,
+            }
+            try:
+                resp = requests.post(url, json=payload, timeout=60)
+                resp.raise_for_status()
+                data = resp.json()
+                raw_text = data.get("choices", [{}])[0].get("text", "{}")
+            except Exception as exc:  # noqa: BLE001
+                return InferenceResult(
+                    suggested_path=str(Path(metadata.get("path", "")).name),
+                    confidence=0.0,
+                    justification=f"Local inference error: {exc}",
+                )
+        else:  # cloud
+            # Read endpoint / api key from config
+            try:
+                import yaml
 
-        return InferenceResult(
-            suggested_path=suggested,
-            confidence=confidence,
-            justification="Heuristic placeholder categorization",
-        ) 
+                cfg = yaml.safe_load(CONFIG_PATH.read_text())
+                endpoint = cfg.get("cloud_endpoint")
+                api_key = cfg.get("cloud_api_key")
+            except Exception:
+                endpoint = None
+                api_key = None
+
+            if not endpoint:
+                return InferenceResult(
+                    suggested_path=str(Path(metadata.get("path", "")).name),
+                    confidence=0.0,
+                    justification="Cloud endpoint not configured",
+                )
+
+            headers = {"Authorization": f"Bearer {api_key}"} if api_key else {}
+            payload = {"prompt": prompt, "max_tokens": 512}
+            try:
+                resp = requests.post(endpoint, json=payload, headers=headers, timeout=60)
+                resp.raise_for_status()
+                raw_text = resp.json().get("content", "{}")
+            except Exception as exc:  # noqa: BLE001
+                return InferenceResult(
+                    suggested_path=str(Path(metadata.get("path", "")).name),
+                    confidence=0.0,
+                    justification=f"Cloud inference error: {exc}",
+                )
+
+        # Parse model JSON
+        try:
+            obj = json.loads(raw_text)
+            return InferenceResult(
+                suggested_path=obj["suggested_path"],
+                confidence=float(obj.get("confidence_score", obj.get("confidence", 0.0))),
+                justification=obj.get("justification", ""),
+            )
+        except Exception as exc:  # noqa: BLE001
+            return InferenceResult(
+                suggested_path=str(Path(metadata.get("path", "")).name),
+                confidence=0.0,
+                justification=f"Parse error: {exc}",
+            ) 
