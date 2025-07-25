@@ -1,5 +1,3 @@
-# Sentinel Application Configuration
-
-database_path: "sentinel.db"
-default_scan_directory: "~/"
-ai_backend_mode: "local"  # Options: local, cloud 
+ai_backend_mode: cloud
+database_path: sentinel.db
+default_scan_directory: ~/

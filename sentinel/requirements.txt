@@ -1,18 +1,21 @@
-# Core
+# Core & Config
 python-dotenv
 pyyaml
 
-# File System & Metadata
+# Backend: File System, Metadata, Content
 filetype
 Pillow
 PyMuPDF
 python-docx
 pytesseract
 psd-tools
-osxmetadata; sys_platform == 'darwin'
+osxmetadata; sys_platform == 'darwin' # macOS specific
 
-# Database
+# Backend: Database
 sqlalchemy
 
-# UI (using PyQt6 for robustness)
+# Backend: AI Inference
+# Add llama-cpp-python later if needed
+
+# UI
 PyQt6 
