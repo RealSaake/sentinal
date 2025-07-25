@@ -1,0 +1,245 @@
+{
+  "report_generated": "2025-07-25T21:34:03.584982",
+  "system_info": {
+    "platform": {
+      "system": "Windows",
+      "release": "11",
+      "version": "10.0.26100",
+      "machine": "AMD64",
+      "processor": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD",
+      "architecture": [
+        "64bit",
+        "WindowsPE"
+      ],
+      "python_version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+      "python_executable": "C:\\Users\\anubh\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe"
+    },
+    "hardware": {
+      "cpu_count": 12,
+      "cpu_percent": 8.9,
+      "memory_total_gb": 31.95,
+      "memory_available_gb": 13.37,
+      "memory_percent": 58.1,
+      "disk_usage": {
+        "total_gb": 930.52,
+        "used_gb": 877.07,
+        "free_gb": 53.44,
+        "percent": 94.3
+      }
+    },
+    "environment": {
+      "working_directory": "C:\\Users\\anubh\\Downloads\\StorageAnalyzer",
+      "python_path": [
+        "C:\\Users\\anubh\\Downloads\\StorageAnalyzer\\sentinel",
+        "C:\\Users\\anubh\\Downloads\\StorageAnalyzer",
+        "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\\python313.zip",
+        "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\\DLLs",
+        "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\\Lib"
+      ],
+      "environment_variables": {
+        "PATH": "C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\GTK3-Runtime Win64\\bin;C:\\Program Files\\Cloudflare\\Cloudflare WARP\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\GitHub CLI\\;C:\\Users\\anubh\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\anubh\\AppData\\Local\\Muse Hub\\lib;C:\\Users\\anubh\\AppData\\Roaming\\npm;C:\\Users\\anubh\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\anubh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\anubh\\AppData\\Local\\Programs\\Kiro\\bin;C:\\Users\\anubh\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Users\\anubh\\AppData\\Local\\Programs\\Ollama;C:\\Users\\anubh\\AppData\\Local\\Programs\\Ollama;C:\\Users\\anubh\\AppData\\Local\\Programs\\Ollama",
+        "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL",
+        "PYTHONUSERBASE": "C:\\Users\\anubh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages"
+      }
+    }
+  },
+  "application_state": {
+    "configuration": {
+      "ai_backend_mode": "local",
+      "database_path": "sentinel.db",
+      "default_scan_directory": "~/",
+      "logging_config": {
+        "level": "INFO",
+        "file_path": "logs/sentinel.log",
+        "max_file_size_mb": 10,
+        "max_files": 5,
+        "cleanup_days": 30,
+        "console_output": true,
+        "performance_monitoring": true
+      }
+    },
+    "file_system": {
+      "config_file_exists": true,
+      "database_exists": true,
+      "logs_directory_exists": true,
+      "current_log_files": [
+        {
+          "name": "sentinel.log",
+          "size_mb": 0.0,
+          "modified": "2025-07-25T21:34:03.584229"
+        }
+      ]
+    },
+    "application": {
+      "startup_time": "2025-07-25T21:34:04.598847",
+      "process_id": 8324,
+      "working_directory": "C:\\Users\\anubh\\Downloads\\StorageAnalyzer"
+    },
+    "logging": {
+      "current_level": "INFO",
+      "log_file_path": "logs/sentinel.log",
+      "total_loggers": 4,
+      "memory_buffer_size": 12,
+      "log_file_exists": true,
+      "log_file_size_mb": 0.0023412704467773438
+    },
+    "performance": {
+      "ai_inference": {
+        "total_calls": 2,
+        "average_duration": 0.85,
+        "recent_average_duration": 0.85,
+        "success_rate": 50.0,
+        "last_24h_calls": 2,
+        "total_errors": 1,
+        "recent_errors": [
+          {
+            "timestamp": "2025-07-25 21:34:02.485516",
+            "error": "Test error",
+            "duration": 1.2,
+            "model": null
+          }
+        ]
+      },
+      "test_operation": {
+        "total_calls": 1,
+        "average_duration": 0.10029600000052596,
+        "recent_average_duration": 0.10029600000052596,
+        "success_rate": 100.0,
+        "last_24h_calls": 1,
+        "total_errors": 0,
+        "recent_errors": []
+      },
+      "_system": {
+        "active_operations": 0,
+        "total_operation_types": 2,
+        "monitoring_start_time": "2025-07-25T21:34:04.599415"
+      }
+    }
+  },
+  "ai_connectivity": {
+    "backend_type": "local",
+    "endpoint": "http://127.0.0.1:11434",
+    "status": "connected",
+    "response_time_ms": 20.16,
+    "error": null,
+    "model_info": {
+      "available_models": [
+        "llama3.2:3b"
+      ],
+      "model_count": 1
+    }
+  },
+  "database_connectivity": {
+    "database_path": "sentinel.db",
+    "status": "connected",
+    "file_exists": true,
+    "file_size_mb": 0.461,
+    "connection_test": true,
+    "table_count": 2,
+    "error": null,
+    "tables": [
+      "files",
+      "inferences"
+    ]
+  },
+  "recent_logs": [
+    {
+      "timestamp": "2025-07-25T21:34:02.382869",
+      "level": "INFO",
+      "logger": "sentinel.logger_manager",
+      "message": "Logging system initialized - Level: INFO, File: logs/sentinel.log",
+      "location": "logger_manager:96:_setup_logging"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:02.383645",
+      "level": "INFO",
+      "logger": "sentinel.test",
+      "message": "\u2705 LoggerManager initialized successfully",
+      "location": "test_logging_system:32:test_logging_system"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:02.384015",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Performance monitoring initialized",
+      "location": "performance_monitor:64:__init__"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:02.384169",
+      "level": "INFO",
+      "logger": "sentinel.test",
+      "message": "\u2705 PerformanceMonitor initialized successfully",
+      "location": "test_logging_system:37:test_logging_system"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:02.384415",
+      "level": "INFO",
+      "logger": "sentinel.test",
+      "message": "\u2705 DebugInfoCollector initialized successfully",
+      "location": "test_logging_system:42:test_logging_system"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:02.485023",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation test_operation SUCCESS in 0.100s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:02.485344",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.500s (model: test_model)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:02.485536",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference FAILED in 1.200s",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:02.485708",
+      "level": "INFO",
+      "logger": "sentinel.test",
+      "message": "\u2705 Performance monitoring test completed",
+      "location": "test_logging_system:55:test_logging_system"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:03.580853",
+      "level": "INFO",
+      "logger": "sentinel.debug_collector",
+      "message": "AI connectivity test: connected",
+      "location": "debug_collector:198:_test_local_ai_connectivity"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:03.584153",
+      "level": "INFO",
+      "logger": "sentinel.debug_collector",
+      "message": "Database connectivity test: connected",
+      "location": "debug_collector:291:test_database_connectivity"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:03.584336",
+      "level": "INFO",
+      "logger": "sentinel.test",
+      "message": "\u2705 Debug info collection completed",
+      "location": "test_logging_system:64:test_logging_system"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:04.619629",
+      "level": "INFO",
+      "logger": "sentinel.debug_collector",
+      "message": "AI connectivity test: connected",
+      "location": "debug_collector:198:_test_local_ai_connectivity"
+    },
+    {
+      "timestamp": "2025-07-25T21:34:04.620697",
+      "level": "INFO",
+      "logger": "sentinel.debug_collector",
+      "message": "Database connectivity test: connected",
+      "location": "debug_collector:291:test_database_connectivity"
+    }
+  ]
+}

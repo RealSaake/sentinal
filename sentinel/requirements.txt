@@ -1,6 +1,8 @@
 # Core & Config
 python-dotenv
 pyyaml
+psutil
+requests
 
 # Backend: File System, Metadata, Content
 filetype

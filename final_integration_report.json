@@ -1,0 +1,472 @@
+{
+  "report_generated": "2025-07-25T21:44:54.196618",
+  "system_info": {
+    "platform": {
+      "system": "Windows",
+      "release": "11",
+      "version": "10.0.26100",
+      "machine": "AMD64",
+      "processor": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD",
+      "architecture": [
+        "64bit",
+        "WindowsPE"
+      ],
+      "python_version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+      "python_executable": "C:\\Users\\anubh\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe"
+    },
+    "hardware": {
+      "cpu_count": 12,
+      "cpu_percent": 39.5,
+      "memory_total_gb": 31.95,
+      "memory_available_gb": 12.57,
+      "memory_percent": 60.6,
+      "disk_usage": {
+        "total_gb": 930.52,
+        "used_gb": 880.17,
+        "free_gb": 50.34,
+        "percent": 94.6
+      }
+    },
+    "environment": {
+      "working_directory": "C:\\Users\\anubh\\Downloads\\StorageAnalyzer",
+      "python_path": [
+        "C:\\Users\\anubh\\Downloads\\StorageAnalyzer\\sentinel",
+        "C:\\Users\\anubh\\Downloads\\StorageAnalyzer",
+        "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\\python313.zip",
+        "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\\DLLs",
+        "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\\Lib"
+      ],
+      "environment_variables": {
+        "PATH": "C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\GTK3-Runtime Win64\\bin;C:\\Program Files\\Cloudflare\\Cloudflare WARP\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\GitHub CLI\\;C:\\Users\\anubh\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\anubh\\AppData\\Local\\Muse Hub\\lib;C:\\Users\\anubh\\AppData\\Roaming\\npm;C:\\Users\\anubh\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\anubh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\anubh\\AppData\\Local\\Programs\\Kiro\\bin;C:\\Users\\anubh\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin",
+        "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL",
+        "PYTHONUSERBASE": "C:\\Users\\anubh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages"
+      }
+    }
+  },
+  "application_state": {
+    "configuration": {
+      "ai_backend_mode": "cloud",
+      "database_path": "sentinel.db",
+      "default_scan_directory": "~/",
+      "logging_config": {}
+    },
+    "file_system": {
+      "config_file_exists": true,
+      "database_exists": true,
+      "logs_directory_exists": true,
+      "current_log_files": [
+        {
+          "name": "sentinel.log",
+          "size_mb": 1.57,
+          "modified": "2025-07-25T21:44:54.195894"
+        },
+        {
+          "name": "sentinel.log.1",
+          "size_mb": 6.15,
+          "modified": "2025-07-25T21:39:37.647159"
+        }
+      ]
+    },
+    "application": {
+      "startup_time": "2025-07-25T21:44:55.263711",
+      "process_id": 2040,
+      "working_directory": "C:\\Users\\anubh\\Downloads\\StorageAnalyzer"
+    },
+    "logging": {
+      "current_level": "INFO",
+      "log_file_path": "logs/sentinel.log",
+      "total_loggers": 5,
+      "memory_buffer_size": 64,
+      "log_file_exists": true,
+      "log_file_size_mb": 1.5658340454101562
+    },
+    "performance": {
+      "ai_inference": {
+        "total_calls": 16,
+        "average_duration": 0.6634896062498683,
+        "recent_average_duration": 0.6634896062498683,
+        "success_rate": 100.0,
+        "last_24h_calls": 16,
+        "total_errors": 0,
+        "recent_errors": []
+      },
+      "_system": {
+        "active_operations": 0,
+        "total_operation_types": 1,
+        "monitoring_start_time": "2025-07-25T21:44:55.264649"
+      }
+    }
+  },
+  "ai_connectivity": {
+    "backend_type": "cloud",
+    "endpoint": "not_configured",
+    "status": "not_configured",
+    "response_time_ms": null,
+    "error": "Cloud endpoint not configured"
+  },
+  "database_connectivity": {
+    "database_path": "sentinel.db",
+    "status": "connected",
+    "file_exists": true,
+    "file_size_mb": 0.652,
+    "connection_test": true,
+    "table_count": 2,
+    "error": null,
+    "tables": [
+      "files",
+      "inferences"
+    ]
+  },
+  "recent_logs": [
+    {
+      "timestamp": "2025-07-25T21:44:49.737208",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\u2705 Analysis complete: Financial/Receipts/invoice_12345.pdf (confidence: 0.8)",
+      "location": "final_integration_test:76:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:49.837708",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\ud83d\udcc4 Processing file 3/8: /Users/john/Pictures/vacation_beach.jpg",
+      "location": "final_integration_test:63:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:49.838023",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: /Users/john/Pictures/vacation_beach.jpg",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:50.417366",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.579s - Suggested: Pictures/Vacation/summer_vacation_at_the_beach.jpg, Confidence: 0.8",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:50.417638",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.579s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:50.417793",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.579s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:50.417980",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\u2705 Analysis complete: Pictures/Vacation/summer_vacation_at_the_beach.jpg (confidence: 0.8)",
+      "location": "final_integration_test:76:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:50.518647",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\ud83d\udcc4 Processing file 4/8: /Users/john/Code/python/data_analyzer.py",
+      "location": "final_integration_test:63:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:50.518975",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: /Users/john/Code/python/data_analyzer.py",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:51.116250",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.597s - Suggested: Data/Analysis/Scripts/python/data_analyzer.py, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:51.116507",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.597s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:51.116669",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.597s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:51.116804",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\u2705 Analysis complete: Data/Analysis/Scripts/python/data_analyzer.py (confidence: 0.9)",
+      "location": "final_integration_test:76:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:51.217285",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\ud83d\udcc4 Processing file 5/8: /Users/john/Music/playlist_workout.m3u",
+      "location": "final_integration_test:63:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:51.217646",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: /Users/john/Music/playlist_workout.m3u",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:51.776603",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.559s - Suggested: /Music/Playlist/Workout workout.m3u, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:51.776870",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.559s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:51.777068",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.559s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:51.777215",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\u2705 Analysis complete: /Music/Playlist/Workout workout.m3u (confidence: 0.9)",
+      "location": "final_integration_test:76:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:51.877642",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\ud83d\udcc4 Processing file 6/8: /Users/john/Desktop/meeting_notes_jan.txt",
+      "location": "final_integration_test:63:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:51.878038",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: /Users/john/Desktop/meeting_notes_jan.txt",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:52.509442",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.631s - Suggested: Meeting Notes/January/meeting_notes_jan.txt, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:52.509899",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.631s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:52.510139",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.631s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:52.510372",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\u2705 Analysis complete: Meeting Notes/January/meeting_notes_jan.txt (confidence: 0.9)",
+      "location": "final_integration_test:76:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:52.610967",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\ud83d\udcc4 Processing file 7/8: /Users/john/Documents/budget_2024.xlsx",
+      "location": "final_integration_test:63:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:52.611301",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: /Users/john/Documents/budget_2024.xlsx",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:53.443036",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.832s - Suggested: Financial Documents/Budgeting/2024 Budget.xlsx, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:53.443526",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.832s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:53.443769",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.832s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:53.443938",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\u2705 Analysis complete: Financial Documents/Budgeting/2024 Budget.xlsx (confidence: 0.9)",
+      "location": "final_integration_test:76:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:53.544592",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\ud83d\udcc4 Processing file 8/8: /Users/john/Downloads/software_manual.pdf",
+      "location": "final_integration_test:63:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:53.545076",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: /Users/john/Downloads/software_manual.pdf",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.090825",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.546s - Suggested: Software/Installation Guides/software_manual.pdf, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.091091",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.546s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.091278",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.546s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.091449",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\u2705 Analysis complete: Software/Installation Guides/software_manual.pdf (confidence: 0.9)",
+      "location": "final_integration_test:76:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.191882",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\ud83d\udcca Analysis complete: 8 successful, 0 failed",
+      "location": "final_integration_test:87:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.193537",
+      "level": "INFO",
+      "logger": "sentinel.debug_collector",
+      "message": "Database connectivity test: connected",
+      "location": "debug_collector:291:test_database_connectivity"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.193720",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\ud83e\udd16 AI Backend Status: not_configured",
+      "location": "final_integration_test:95:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.193903",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\ud83d\uddc4\ufe0f Database Status: connected",
+      "location": "final_integration_test:96:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.194210",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "\ud83d\udcca AI Performance: 16 calls, 0.663s avg, 100.0% success rate",
+      "location": "final_integration_test:104:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.194462",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "Switching to DEBUG mode for detailed logging...",
+      "location": "final_integration_test:110:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.194643",
+      "level": "INFO",
+      "logger": "sentinel.logger_manager",
+      "message": "Log level changed to DEBUG",
+      "location": "logger_manager:116:set_log_level"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.194808",
+      "level": "DEBUG",
+      "logger": "sentinel.sentinel_app",
+      "message": "This is a debug message - should be visible now",
+      "location": "final_integration_test:113:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.194959",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "Debug mode is now active",
+      "location": "final_integration_test:114:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.195129",
+      "level": "INFO",
+      "logger": "sentinel.logger_manager",
+      "message": "Log level changed to INFO",
+      "location": "logger_manager:116:set_log_level"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.195282",
+      "level": "INFO",
+      "logger": "sentinel.sentinel_app",
+      "message": "Switched back to INFO level",
+      "location": "final_integration_test:118:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:54.195532",
+      "level": "ERROR",
+      "logger": "sentinel.sentinel_app",
+      "message": "Caught application error",
+      "location": "final_integration_test:126:final_integration_test"
+    },
+    {
+      "timestamp": "2025-07-25T21:44:55.265817",
+      "level": "INFO",
+      "logger": "sentinel.debug_collector",
+      "message": "Database connectivity test: connected",
+      "location": "debug_collector:291:test_database_connectivity"
+    }
+  ]
+}

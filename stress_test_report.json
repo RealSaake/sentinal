@@ -1,0 +1,75 @@
+{
+  "test_summary": {
+    "total_tests": 9,
+    "passed_tests": 9,
+    "failed_tests": 0,
+    "success_rate": 100.0,
+    "total_duration": 56.09018680000008,
+    "timestamp": "2025-07-25T21:40:24.908454"
+  },
+  "test_results": {
+    "high_volume_logging": {
+      "status": "PASS",
+      "messages": 2000,
+      "duration": 0.2520909999984724,
+      "messages_per_second": 7933.6430099135605
+    },
+    "concurrent_logging": {
+      "status": "PASS",
+      "threads": 15,
+      "total_messages": 3000,
+      "duration": 0.5346738999978697,
+      "messages_per_second": 5610.896660584989
+    },
+    "performance_monitoring_stress": {
+      "status": "PASS",
+      "operations": 1150,
+      "duration": 6.211969699998008,
+      "metrics_collected": 5,
+      "operations_per_second": 185.12646640893448
+    },
+    "log_rotation": {
+      "status": "PASS",
+      "log_files_created": 2,
+      "log_files": [
+        "sentinel.log",
+        "sentinel.log.1"
+      ]
+    },
+    "memory_usage": {
+      "status": "PASS",
+      "initial_memory_mb": 57.11328125,
+      "final_memory_mb": 64.8125,
+      "memory_increase_mb": 7.69921875
+    },
+    "debug_collector_stress": {
+      "status": "PASS",
+      "collection_cycles": 20,
+      "debug_report_size_bytes": 22053
+    },
+    "ai_inference_with_logging": {
+      "status": "PASS",
+      "total_requests": 25,
+      "successful_requests": 25,
+      "failed_requests": 0,
+      "success_rate": 100.0,
+      "avg_duration": 0.4050792636052977
+    },
+    "log_level_changes": {
+      "status": "PASS",
+      "levels_tested": [
+        "DEBUG",
+        "INFO",
+        "WARNING",
+        "ERROR",
+        "CRITICAL"
+      ],
+      "final_level": "INFO"
+    },
+    "error_handling": {
+      "status": "PASS",
+      "error_scenarios_tested": 3
+    }
+  },
+  "errors": []
+}
