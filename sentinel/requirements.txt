@@ -1,0 +1,18 @@
+# Core
+python-dotenv
+pyyaml
+
+# File System & Metadata
+filetype
+Pillow
+PyMuPDF
+python-docx
+pytesseract
+psd-tools
+osxmetadata; sys_platform == 'darwin'
+
+# Database
+sqlalchemy
+
+# UI (using PyQt6 for robustness)
+PyQt6 
