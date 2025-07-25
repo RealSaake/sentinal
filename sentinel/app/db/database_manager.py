@@ -55,10 +55,8 @@ class FileRecord(Base):
     ai_justification = Column(Text, nullable=True)
     status = Column(String, default="pending_review", nullable=False)
 
-    __table_args__ = (
-        Index("ix_files_sha256_hash", "sha256_hash"),
-        Index("ix_files_original_path", "original_path"),
-    )
+    # Rely on automatic indexes created via `index=True` on Column definitions.
+    __table_args__ = ()
 
     def to_dict(self) -> Dict[str, Any]:
         """Return a plain-python dict representation of this record."""
