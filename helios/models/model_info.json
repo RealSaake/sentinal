@@ -1,0 +1,17 @@
+{
+  "model_name": "mock-distilbert-for-mvp",
+  "onnx_path": "C:\\Users\\anubh\\Downloads\\StorageAnalyzer\\helios\\models\\sentinel_v1.onnx",
+  "device": "cpu",
+  "cuda_available": false,
+  "is_mock": true,
+  "performance_stats": {
+    "avg_inference_time": 0.001,
+    "min_inference_time": 0.0005,
+    "max_inference_time": 0.002,
+    "std_inference_time": 0.0003,
+    "throughput_per_sec": 1000.0
+  },
+  "created_at": "2025-07-25 23:15:46",
+  "file_size_mb": 0.0362396240234375,
+  "note": "This is a mock model for MVP testing. Replace with real ONNX model for production."
+}

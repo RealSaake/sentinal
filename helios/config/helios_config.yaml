@@ -1,0 +1,368 @@
+# Helios Hybrid Architecture - Advanced Configuration
+# Full control over file organization with intelligent logic
+
+# Core System Settings
+system:
+  name: "Helios File Organization System"
+  version: "1.0.0"
+  mode: "intelligent"  # intelligent, aggressive, conservative, custom
+
+# Logging Configuration
+logging:
+  level: INFO
+  directory: "logs"
+  structured: true
+  max_file_size_mb: 100
+  backup_count: 5
+
+# Database Configuration
+database:
+  path: "db/helios.db"
+  connection_pool_size: 10
+  backup_enabled: true
+  backup_interval_hours: 24
+
+# Performance Settings - Helios Hybrid Pipeline
+performance:
+  io_workers: 4              # Asyncio file scanning workers
+  gpu_workers: 2             # GPU inference processes
+  batch_size: 128            # Files per inference batch
+  queue_max_size: 10000      # Maximum queue depth
+  memory_limit_gb: 8         # Memory usage limit
+  cpu_limit_percent: 80      # CPU usage limit
+
+# AI Inference Configuration
+inference:
+  runtime: "onnx"
+  onnx_model_path: "helios/models/sentinel_v1.onnx"
+  cuda_enabled: true
+  fallback_to_cpu: true
+  max_sequence_length: 512
+  confidence_threshold: 0.7   # Minimum confidence for suggestions
+  use_context_analysis: true  # Analyze file content for better categorization
+
+# Observability and Monitoring
+observability:
+  prometheus_port: 9090
+  metrics_update_interval: 1.0
+  health_check_interval: 5.0
+  enable_detailed_logging: true
+
+# UI Dashboard Settings
+ui:
+  dashboard_port: 8080
+  chart_update_interval: 1.0
+  max_chart_points: 1000
+  theme: "dark"  # dark, light, auto
+
+# ADVANCED ORGANIZATION RULES
+organization:
+  # Global Settings
+  preserve_directory_structure: true    # Keep related files together
+  smart_grouping: true                 # Group related files intelligently
+  skip_system_files: true             # Skip OS and system files
+  skip_temp_files: true               # Skip temporary files
+  create_backups: true                # Create backups before moving
+  dry_run_mode: false                 # Test mode - don't actually move files
+  
+  # File Size Filters
+  file_size_limits:
+    min_size_bytes: 1024              # Skip files smaller than 1KB
+    max_size_bytes: 10737418240       # Skip files larger than 10GB
+    skip_empty_files: true
+    
+  # File Age Filters
+  file_age_filters:
+    skip_files_newer_than_days: 0     # 0 = no limit
+    skip_files_older_than_days: 0     # 0 = no limit
+    consider_access_time: true
+    consider_creation_time: true
+    
+  # Extension-Based Rules
+  extensions:
+    # Images
+    images:
+      extensions: [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".webp", ".svg", ".ico", ".raw", ".cr2", ".nef", ".arw"]
+      base_path: "Media/Images"
+      smart_categorization: true
+      subcategories:
+        screenshots: 
+          patterns: ["screenshot", "screen shot", "capture"]
+          path: "Screenshots"
+        photos:
+          patterns: ["photo", "img", "pic", "picture"]
+          path: "Photos"
+        graphics:
+          patterns: ["logo", "icon", "graphic", "design"]
+          path: "Graphics"
+        wallpapers:
+          patterns: ["wallpaper", "background", "desktop"]
+          path: "Wallpapers"
+      
+    # Videos
+    videos:
+      extensions: [".mp4", ".avi", ".mkv", ".mov", ".wmv", ".flv", ".webm", ".m4v", ".3gp", ".ts", ".mts"]
+      base_path: "Media/Videos"
+      smart_categorization: true
+      subcategories:
+        movies:
+          patterns: ["movie", "film", "cinema"]
+          path: "Movies"
+        tv_shows:
+          patterns: ["s01e", "season", "episode", "tv", "series"]
+          path: "TV Shows"
+        tutorials:
+          patterns: ["tutorial", "howto", "guide", "lesson"]
+          path: "Tutorials"
+        recordings:
+          patterns: ["recording", "record", "capture", "stream"]
+          path: "Recordings"
+          
+    # Audio
+    audio:
+      extensions: [".mp3", ".wav", ".flac", ".aac", ".ogg", ".wma", ".m4a", ".opus", ".aiff"]
+      base_path: "Media/Audio"
+      smart_categorization: true
+      subcategories:
+        music:
+          patterns: ["music", "song", "track", "album"]
+          path: "Music"
+        podcasts:
+          patterns: ["podcast", "episode", "interview"]
+          path: "Podcasts"
+        audiobooks:
+          patterns: ["audiobook", "book", "chapter"]
+          path: "Audiobooks"
+        sounds:
+          patterns: ["sound", "effect", "sfx", "sample"]
+          path: "Sound Effects"
+          
+    # Documents
+    documents:
+      extensions: [".pdf", ".doc", ".docx", ".txt", ".rtf", ".odt", ".pages", ".tex", ".md", ".epub", ".mobi"]
+      base_path: "Documents"
+      smart_categorization: true
+      subcategories:
+        books:
+          patterns: ["book", "novel", "ebook", "manual", "guide"]
+          path: "Books"
+        work:
+          patterns: ["work", "business", "office", "report", "proposal"]
+          path: "Work"
+        personal:
+          patterns: ["personal", "diary", "journal", "note"]
+          path: "Personal"
+        academic:
+          patterns: ["paper", "thesis", "research", "study", "academic"]
+          path: "Academic"
+          
+    # Code and Development
+    code:
+      extensions: [".py", ".js", ".html", ".css", ".cpp", ".java", ".c", ".h", ".php", ".rb", ".go", ".rs", ".swift", ".kt", ".ts", ".jsx", ".vue", ".sql", ".json", ".xml", ".yaml", ".yml"]
+      base_path: "Development"
+      smart_categorization: true
+      preserve_project_structure: true  # Keep code projects together
+      subcategories:
+        projects:
+          patterns: ["project", "app", "application", "src", "source"]
+          path: "Projects"
+        scripts:
+          patterns: ["script", "tool", "utility", "automation"]
+          path: "Scripts"
+        config:
+          patterns: ["config", "configuration", "settings", "env"]
+          path: "Configuration"
+        libraries:
+          patterns: ["lib", "library", "module", "package"]
+          path: "Libraries"
+          
+    # Archives and Compressed Files
+    archives:
+      extensions: [".zip", ".rar", ".7z", ".tar", ".gz", ".bz2", ".xz", ".tar.gz", ".tar.bz2", ".tar.xz"]
+      base_path: "Archives"
+      smart_categorization: true
+      subcategories:
+        software:
+          patterns: ["setup", "installer", "install", "software", "program"]
+          path: "Software"
+        backups:
+          patterns: ["backup", "bak", "archive", "old"]
+          path: "Backups"
+        downloads:
+          patterns: ["download", "temp", "tmp"]
+          path: "Downloads"
+          
+    # Spreadsheets and Data
+    spreadsheets:
+      extensions: [".xlsx", ".xls", ".csv", ".ods", ".numbers", ".tsv"]
+      base_path: "Documents/Spreadsheets"
+      smart_categorization: true
+      subcategories:
+        financial:
+          patterns: ["budget", "finance", "money", "expense", "income"]
+          path: "Financial"
+        data:
+          patterns: ["data", "dataset", "analysis", "report"]
+          path: "Data"
+          
+    # Presentations
+    presentations:
+      extensions: [".pptx", ".ppt", ".odp", ".key"]
+      base_path: "Documents/Presentations"
+      smart_categorization: true
+      
+    # Fonts
+    fonts:
+      extensions: [".ttf", ".otf", ".woff", ".woff2", ".eot"]
+      base_path: "Resources/Fonts"
+      
+    # 3D and CAD Files
+    cad_3d:
+      extensions: [".dwg", ".dxf", ".step", ".iges", ".stl", ".obj", ".fbx", ".blend", ".max", ".c4d"]
+      base_path: "Design/3D_CAD"
+      
+  # Smart Skip Rules - Files to ignore
+  skip_rules:
+    # System Files
+    system_files:
+      enabled: true
+      patterns: ["thumbs.db", "desktop.ini", ".ds_store", "hiberfil.sys", "pagefile.sys", "swapfile.sys"]
+      extensions: [".tmp", ".temp", ".cache", ".log"]
+      
+    # Development Files
+    dev_files:
+      enabled: true
+      patterns: ["node_modules", ".git", ".svn", ".hg", "__pycache__", ".pytest_cache", ".vscode", ".idea"]
+      extensions: [".pyc", ".pyo", ".class", ".o", ".obj"]
+      
+    # Temporary Files
+    temp_files:
+      enabled: true
+      patterns: ["~$", ".~", "temp_", "tmp_", "backup_"]
+      age_days: 7  # Skip temp files older than 7 days
+      
+    # Duplicate Files
+    duplicates:
+      enabled: true
+      check_by_hash: true
+      check_by_name: true
+      keep_newest: true
+      
+    # Corrupted Files
+    corrupted:
+      enabled: true
+      check_file_integrity: true
+      quarantine_path: "Quarantine/Corrupted"
+      
+  # Advanced Logic Rules
+  smart_rules:
+    # Game Files - Keep together
+    game_preservation:
+      enabled: true
+      patterns: ["game", "games", "steam", "origin", "uplay", "epic", "gog"]
+      action: "preserve_structure"  # Don't reorganize game directories
+      
+    # Project Preservation
+    project_preservation:
+      enabled: true
+      indicators: ["package.json", "requirements.txt", "pom.xml", "Cargo.toml", ".git", "makefile"]
+      action: "preserve_structure"
+      
+    # Series and Collections
+    series_detection:
+      enabled: true
+      patterns: ["part", "vol", "volume", "chapter", "episode", "season", "disc"]
+      action: "group_together"
+      
+    # Date-based Organization
+    date_organization:
+      enabled: true
+      use_creation_date: true
+      use_modification_date: false
+      format: "YYYY/MM"  # Year/Month folders
+      apply_to: ["images", "videos", "documents"]
+      
+    # Size-based Rules
+    size_rules:
+      large_files:
+        threshold_gb: 1
+        path: "Large Files"
+        enabled: true
+      small_files:
+        threshold_kb: 100
+        path: "Small Files"
+        enabled: false
+        
+  # Custom User Rules (can be extended)
+  custom_rules:
+    # Example: Photography workflow
+    photography:
+      enabled: false
+      source_patterns: ["raw", "cr2", "nef", "arw"]
+      processed_patterns: ["edited", "processed", "final"]
+      action: "group_by_shoot"
+      
+    # Example: Music organization
+    music_organization:
+      enabled: false
+      organize_by: "artist_album"  # artist_album, genre, year
+      create_artist_folders: true
+      
+# File Naming Rules
+naming:
+  # Standardize file names
+  standardize_names: true
+  remove_special_chars: true
+  replace_spaces_with: "_"  # underscore, dash, or space
+  case_style: "lower"  # lower, upper, title, camel
+  
+  # Duplicate handling
+  duplicate_suffix: "_copy"
+  max_duplicates: 99
+  
+  # Invalid character replacement
+  invalid_chars: ["<", ">", ":", "\"", "|", "?", "*"]
+  replacement_char: "_"
+
+# Safety and Backup Settings
+safety:
+  # Backup before operations
+  create_backups: true
+  backup_location: "Backups/File_Operations"
+  backup_retention_days: 30
+  
+  # Confirmation requirements
+  require_confirmation: true
+  confirm_large_operations: true  # Operations affecting >1000 files
+  confirm_destructive_operations: true
+  
+  # Rollback capability
+  enable_rollback: true
+  rollback_retention_days: 7
+  
+  # Dry run mode
+  dry_run_default: false
+  show_dry_run_results: true
+
+# Performance Optimization
+optimization:
+  # Parallel processing
+  max_concurrent_operations: 4
+  chunk_size: 1000
+  
+  # Memory management
+  clear_cache_interval: 3600  # seconds
+  max_memory_usage_mb: 2048
+  
+  # I/O optimization
+  use_fast_copy: true
+  verify_copies: true
+  buffer_size_kb: 64
+
+# Reporting and Analytics
+reporting:
+  generate_reports: true
+  report_format: "json"  # json, csv, html
+  include_statistics: true
+  include_recommendations: true
+  save_operation_history: true

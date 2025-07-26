@@ -1,0 +1,7 @@
+# ONNX Runtime and Model Dependencies
+onnx>=1.14.0
+onnxruntime-gpu>=1.16.0
+torch>=2.0.0
+transformers>=4.30.0
+numpy>=1.24.0
+nvidia-ml-py>=12.535.0

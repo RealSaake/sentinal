@@ -1,0 +1,472 @@
+{
+  "report_generated": "2025-07-25T21:55:10.819658",
+  "system_info": {
+    "platform": {
+      "system": "Windows",
+      "release": "11",
+      "version": "10.0.26100",
+      "machine": "AMD64",
+      "processor": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD",
+      "architecture": [
+        "64bit",
+        "WindowsPE"
+      ],
+      "python_version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+      "python_executable": "C:\\Users\\anubh\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe"
+    },
+    "hardware": {
+      "cpu_count": 12,
+      "cpu_percent": 25.4,
+      "memory_total_gb": 31.95,
+      "memory_available_gb": 12.07,
+      "memory_percent": 62.2,
+      "disk_usage": {
+        "total_gb": 930.52,
+        "used_gb": 880.25,
+        "free_gb": 50.27,
+        "percent": 94.6
+      }
+    },
+    "environment": {
+      "working_directory": "C:\\Users\\anubh\\Downloads\\StorageAnalyzer",
+      "python_path": [
+        "C:\\Users\\anubh\\Downloads\\StorageAnalyzer",
+        "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\\python313.zip",
+        "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\\DLLs",
+        "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\\Lib",
+        "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0"
+      ],
+      "environment_variables": {
+        "PATH": "C:\\Users\\anubh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\PyQt6\\Qt6\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\GTK3-Runtime Win64\\bin;C:\\Program Files\\Cloudflare\\Cloudflare WARP\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\GitHub CLI\\;C:\\Users\\anubh\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\anubh\\AppData\\Local\\Muse Hub\\lib;C:\\Users\\anubh\\AppData\\Roaming\\npm;C:\\Users\\anubh\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\anubh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\anubh\\AppData\\Local\\Programs\\Kiro\\bin;C:\\Users\\anubh\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin",
+        "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL",
+        "PYTHONUSERBASE": "C:\\Users\\anubh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages"
+      }
+    }
+  },
+  "application_state": {
+    "configuration": {
+      "ai_backend_mode": "cloud",
+      "database_path": "sentinel.db",
+      "default_scan_directory": "~/",
+      "logging_config": {}
+    },
+    "file_system": {
+      "config_file_exists": true,
+      "database_exists": true,
+      "logs_directory_exists": true,
+      "current_log_files": [
+        {
+          "name": "sentinel (2).log",
+          "size_mb": 6.15,
+          "modified": "2025-07-25T21:39:37.647159"
+        },
+        {
+          "name": "sentinel.log",
+          "size_mb": 1.64,
+          "modified": "2025-07-25T21:55:11.722735"
+        }
+      ]
+    },
+    "application": {
+      "startup_time": "2025-07-25T21:55:11.835718",
+      "process_id": 31820,
+      "working_directory": "C:\\Users\\anubh\\Downloads\\StorageAnalyzer"
+    },
+    "logging": {
+      "current_level": "INFO",
+      "log_file_path": "logs/sentinel.log",
+      "total_loggers": 8,
+      "memory_buffer_size": 374,
+      "log_file_exists": true,
+      "log_file_size_mb": 1.6411628723144531
+    },
+    "performance": {
+      "ai_inference": {
+        "total_calls": 140,
+        "average_duration": 0.7699766757141333,
+        "recent_average_duration": 0.6985951559998648,
+        "success_rate": 100.0,
+        "last_24h_calls": 140,
+        "total_errors": 0,
+        "recent_errors": []
+      },
+      "_system": {
+        "active_operations": 1,
+        "total_operation_types": 1,
+        "monitoring_start_time": "2025-07-25T21:55:11.836492"
+      }
+    }
+  },
+  "ai_connectivity": {
+    "backend_type": "cloud",
+    "endpoint": "not_configured",
+    "status": "not_configured",
+    "response_time_ms": null,
+    "error": "Cloud endpoint not configured"
+  },
+  "database_connectivity": {
+    "database_path": "sentinel.db",
+    "status": "connected",
+    "file_exists": true,
+    "file_size_mb": 0.652,
+    "connection_test": true,
+    "table_count": 2,
+    "error": null,
+    "tables": [
+      "files",
+      "inferences"
+    ]
+  },
+  "recent_logs": [
+    {
+      "timestamp": "2025-07-25T21:55:05.493094",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.715s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:05.493276",
+      "level": "INFO",
+      "logger": "sentinel.pipeline",
+      "message": "Successfully analyzed file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Numerics.dll -> Software/Development/Libraries/System/Numerics.dll",
+      "location": "pipeline:65:run_analysis"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:05.500386",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Runtime.dll",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:06.142156",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.642s - Suggested: Software/Development/Libraries/System.Runtime.dll, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:06.142437",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.642s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:06.142632",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.642s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:06.142811",
+      "level": "INFO",
+      "logger": "sentinel.pipeline",
+      "message": "Successfully analyzed file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Runtime.dll -> Software/Development/Libraries/System.Runtime.dll",
+      "location": "pipeline:65:run_analysis"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:06.148143",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Runtime.Serialization.dll",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:06.282076",
+      "level": "INFO",
+      "logger": "sentinel.debug_collector",
+      "message": "Database connectivity test: connected",
+      "location": "debug_collector:291:test_database_connectivity"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:06.854711",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.707s - Suggested: Software/Development/Libraries/System.Runtime.Serialization.dll, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:06.855041",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.707s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:06.855236",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.707s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:06.855401",
+      "level": "INFO",
+      "logger": "sentinel.pipeline",
+      "message": "Successfully analyzed file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Runtime.Serialization.dll -> Software/Development/Libraries/System.Runtime.Serialization.dll",
+      "location": "pipeline:65:run_analysis"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:06.860411",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Security.dll",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:07.481278",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.621s - Suggested: Security/Managed/System.Security.dll, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:07.481547",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.621s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:07.481717",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.621s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:07.481875",
+      "level": "INFO",
+      "logger": "sentinel.pipeline",
+      "message": "Successfully analyzed file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Security.dll -> Security/Managed/System.Security.dll",
+      "location": "pipeline:65:run_analysis"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:07.487580",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.ServiceModel.Internals.dll",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:08.214628",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.727s - Suggested: Software/Development/Libraries/Date Everything_Data/Managed/System.ServiceModel.Internals.dll, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:08.215038",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.727s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:08.215433",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.727s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:08.215620",
+      "level": "INFO",
+      "logger": "sentinel.pipeline",
+      "message": "Successfully analyzed file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.ServiceModel.Internals.dll -> Software/Development/Libraries/Date Everything_Data/Managed/System.ServiceModel.Internals.dll",
+      "location": "pipeline:65:run_analysis"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:08.221161",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Transactions.dll",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:08.998973",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.778s - Suggested: System/Transactions/Managed/System.Transactions.dll, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:08.999390",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.778s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:08.999556",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.778s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:08.999717",
+      "level": "INFO",
+      "logger": "sentinel.pipeline",
+      "message": "Successfully analyzed file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Transactions.dll -> System/Transactions/Managed/System.Transactions.dll",
+      "location": "pipeline:65:run_analysis"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:09.004853",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Xml.dll",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:09.687097",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.682s - Suggested: Software/Development/Libraries/System.Xml.dll, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:09.687411",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.682s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:09.687600",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.682s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:09.687766",
+      "level": "INFO",
+      "logger": "sentinel.pipeline",
+      "message": "Successfully analyzed file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Xml.dll -> Software/Development/Libraries/System.Xml.dll",
+      "location": "pipeline:65:run_analysis"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:09.693152",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Xml.Linq.dll",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:10.358745",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.666s - Suggested: Data/Managed/System.Xml.Linq.dll, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:10.359029",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.666s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:10.359347",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.666s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:10.359535",
+      "level": "INFO",
+      "logger": "sentinel.pipeline",
+      "message": "Successfully analyzed file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\System.Xml.Linq.dll -> Data/Managed/System.Xml.Linq.dll",
+      "location": "pipeline:65:run_analysis"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:10.364872",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\Team17.Common.dll",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:10.972735",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.608s - Suggested: Software/Development/Libraries/Team17.Common.dll, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:10.973021",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.608s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:10.973248",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.608s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:10.973395",
+      "level": "INFO",
+      "logger": "sentinel.pipeline",
+      "message": "Successfully analyzed file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\Team17.Common.dll -> Software/Development/Libraries/Team17.Common.dll",
+      "location": "pipeline:65:run_analysis"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:10.979139",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\Team17.Containers.dll",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:11.716386",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "AI inference completed successfully in 0.737s - Suggested: Software/Development/Libraries/Team17.Containers.dll, Confidence: 0.9",
+      "location": "inference_engine:108:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:11.716670",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "Operation ai_inference SUCCESS in 0.737s",
+      "location": "performance_monitor:134:end_operation"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:11.716974",
+      "level": "INFO",
+      "logger": "sentinel.performance_monitor",
+      "message": "AI inference SUCCESS in 0.737s (model: llama3.2:3b)",
+      "location": "performance_monitor:165:log_ai_request"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:11.717213",
+      "level": "INFO",
+      "logger": "sentinel.pipeline",
+      "message": "Successfully analyzed file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\Team17.Containers.dll -> Software/Development/Libraries/Team17.Containers.dll",
+      "location": "pipeline:65:run_analysis"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:11.723297",
+      "level": "INFO",
+      "logger": "sentinel.inference_engine",
+      "message": "Starting AI inference for file: C:\\Users\\anubh\\Downloads\\Date.Everything.v2025.07.09\\Date.Everything.v2025.07.09\\Date Everything\\Date Everything_Data\\Managed\\Team17.Input.dll",
+      "location": "inference_engine:80:analyze"
+    },
+    {
+      "timestamp": "2025-07-25T21:55:11.838008",
+      "level": "INFO",
+      "logger": "sentinel.debug_collector",
+      "message": "Database connectivity test: connected",
+      "location": "debug_collector:291:test_database_connectivity"
+    }
+  ]
+}
